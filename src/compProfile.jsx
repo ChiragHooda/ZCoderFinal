@@ -1,12 +1,10 @@
 import React from "react"
 import { Link, useLocation } from 'react-router-dom'
 import { useNavigate} from 'react-router-dom'
-import { useFormik } from "formik"
 import { signUpSchema } from "./schemas/index1"
 import profileImg from './assets/profileImg.png'
 import { useState, useRef } from "react"
 // import { response } from "express"
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
