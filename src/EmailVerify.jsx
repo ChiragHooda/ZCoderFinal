@@ -8,7 +8,6 @@ import success from "./assets/Success.png";
 
 const EmailVerify = () => {
 	const [validUrl, setValidUrl] = useState(true);
-	const param = useParams();
 
     const verifyEmailUrl = async () => {
         try {
