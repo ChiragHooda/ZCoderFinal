@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Calendar from './Calendar/MyCalendar/MyCalendar';
 import ShowPQues from "./showPQues"
@@ -19,7 +18,6 @@ function Home(){
         const email = Email.email;
         const url = new URL("http://localhost:1000/getUser/"+email);
         const res = await fetch(url.href,{
-            method:"GET",
             headers: {
                 "Accept" : "application/json"
             }
@@ -33,7 +31,6 @@ function Home(){
     useEffect(() => {
         if(user.length > 0){
             console.log("U",user);
-            navigate("/showProfile/"+user[0].email+"/"+user[0].name+"/"+user[0].age+"/"+user[0].score+"/"+user[0].problems_saved+"/"+user[0].problems_solved);
         }
         }, [user]);
 
