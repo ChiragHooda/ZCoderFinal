@@ -19,22 +19,18 @@ const showComp = (props) => {
     const [value, setValue] = useState("");
 
     const handleClick = (e) => {
-        e.preventDefault();
         setReadmore(!readmore);
     }
 
     const showCommt = (e) => {
-        e.preventDefault();
         setComment(!comment);
     }
 
     const handleChange = (e) => {
-        e.preventDefault();
         setValue(e.target.value);
     }
     
     const handleAddCommt = async(e) => {
-        e.preventDefault();
         console.log(e);
         // console.log(name, email, password, age, github, score, problems_saved, problems_solved);
         console.log(value);
