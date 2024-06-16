@@ -13,7 +13,6 @@ import { useEffect } from "react"
 
 function showProfile(){
     const navigate = useNavigate();
-    const params = useParams();
     const image = params.image;
    
 
