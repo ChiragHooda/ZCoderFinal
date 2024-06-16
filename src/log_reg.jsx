@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faLinkedin, faInstagram, faDiscord} from '@fortawesome/free-brands-svg-icons'
 import { useNavigate } from 'react-router-dom'
-import { useFormik } from "formik"
 import { signUpSchema } from "./schemas";
 import { useEffect } from "react";
 
@@ -32,11 +31,9 @@ function log_reg(){
 
     const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
         initialValues: initialValues,
-        validationSchema: signUpSchema,
         onSubmit: (values, state) => {
             console.log("file log_reg line 42 values", values);
             // window.history.pushState(JSON.stringify(state), "", getSecuredURL('compProfile'));
-            navigate('/compProfile', {state : {name: values.name, email: values.email, password: values.password}});
         },
 
     });
@@ -44,14 +41,12 @@ function log_reg(){
     const [user, setUser] = useState({});
 
     const handleLogin = async(e) => {
-        e.preventDefault();
         console.log(e);
         const email = e.target[0].value;
         const password = e.target[1].value;
         console.log(email,password);
         const url = new URL("http://localhost:1000/isUser/"+email+"/"+password);
         const res = await fetch(url.href,{
-            method:"GET",
             headers: {
                 "Accept" : "application/json"
             }
