@@ -20,7 +20,7 @@ const ShowQues = (props) => {
     const [readmore, setReadmore] = useState(false);
 
     const getPublicQ = async() => {
-        const url = new URL("http://localhost:1000/publicQues");
+        const url = new URL("http://localhost:1000//");
         const res = await fetch(url.href,{
             method:"GET",
             headers: {
