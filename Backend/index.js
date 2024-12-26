@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 app.post("/register", async (req, res) => {
     // console.log(req.body);
     // res.json(req.body);
-    mongoose.connect("mongodb+srv://chiragcbsc:L6IHdbjn5oRgiUNL@zcproject.npyugf8.mongodb.net/?retryWrites=true&w=majority&appName=ZCProject", { useUnifiedTopology: true, useNewUrlParser: true,
+    mongoose.connect("mongodb+srv://chiragcbsc:<password>@zcproject.npyugf8.mongodb.net/?retryWrites=true&w=majority&appName=ZCProject", { useUnifiedTopology: true, useNewUrlParser: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
     useCreateIndex: true  })
